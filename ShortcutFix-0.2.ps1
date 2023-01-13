@@ -65,7 +65,7 @@ if ($office_bitness -eq "x86") {
 
 ##############################################################
 
-## This feature has been made invalid by Microsoft ##
+## This feature has been made invalid by  Microsoft ##
 <#
 
 $taskbarPath = "$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar" 
