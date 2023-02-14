@@ -1,3 +1,6 @@
+#To run this, save this on a C:\temp folder (create if you dont have one) and on a cmd as administrator write: "powershell -executionpolicy bypass -File "ShortcutFix-0.2.ps1". Please don't forget to run as admin.
+
+
 #Check for bitness
 $office = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Office\*"
 $office_bitness = $office.Bitness
@@ -62,7 +65,7 @@ if ($office_bitness -eq "x86") {
 
 ##############################################################
 
-## This feature has been made invalid by Microsoft ##
+## This feature has been made invalid by  Microsoft ##
 <#
 
 $taskbarPath = "$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar" 
