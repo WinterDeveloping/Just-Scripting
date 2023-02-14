@@ -1,0 +1,25 @@
+# Set the path to the program executable
+$ProgramPath = "C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe"
+
+# Set the name of the program
+$ProgramName = "SAP GUI 7.70"
+
+# Set the path to the desktop folder
+$DesktopFolder = [Environment]::GetFolderPath("Desktop")
+
+# Set the path to the start menu folder
+$StartMenuFolder = [Environment]::GetFolderPath("Programs")
+
+# Create the desktop shortcut
+$DesktopShortcutPath = Join-Path $DesktopFolder "$ProgramName.lnk"
+$WshShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut($DesktopShortcutPath)
+$Shortcut.TargetPath = $ProgramPath
+$Shortcut.Save()
+
+# Create the start menu shortcut
+$StartMenuShortcutPath = Join-Path $StartMenuFolder "$ProgramName.lnk"
+$WshShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut($StartMenuShortcutPath)
+$Shortcut.TargetPath = $ProgramPath
+$Shortcut.Save()
